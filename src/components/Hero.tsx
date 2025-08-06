@@ -30,12 +30,12 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           {/* Profile Picture */}
-          <div className="animate-scale-in mb-8">
+          <div className="animate-scale-in mb-8 mt-24">
             <div className="relative mx-auto w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48">
               <div className="absolute inset-0 bg-gradient-primary rounded-full p-1 shadow-glow">
                 <Avatar className="w-full h-full">
                   <AvatarImage 
-                    src="/placeholder.svg" 
+                    src="/Profile_Picture.JPG" 
                     alt="Profile picture"
                     className="object-cover"
                   />
@@ -53,25 +53,24 @@ const Hero = () => {
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               Hi, I'm{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">
-                John Doe
+                Samuel Dipta Yogi Taruna
               </span>
             </h1>
           </div>
 
           <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <h2 className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-8 font-light">
-              Full Stack Developer & UI/UX Designer
+              Full Stack Developer
             </h2>
           </div>
 
           <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
             <p className="text-lg sm:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-              I create beautiful, functional web applications with modern technologies.
-              Passionate about clean code, great design, and exceptional user experiences.
+              I create decent and not so functional websites, but I always try to make them look good.
             </p>
           </div>
 
-          <div className="animate-scale-in flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" style={{ animationDelay: '0.6s' }}>
+          <div className="animate-scale-in flex flex-col sm:flex-row gap-10 justify-center items-center mb-20" style={{ animationDelay: '0.6s' }}>
             <Button 
               size="lg" 
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 px-8 py-3"
@@ -90,22 +89,12 @@ const Hero = () => {
             </Button>
           </div>
 
-          <div className="animate-fade-in flex justify-center space-x-6" style={{ animationDelay: '0.8s' }}>
-            <Button variant="ghost" size="sm" className="hover:text-primary transition-colors">
-              <Github className="w-6 h-6" />
-            </Button>
-            <Button variant="ghost" size="sm" className="hover:text-primary transition-colors">
-              <Linkedin className="w-6 h-6" />
-            </Button>
-            <Button variant="ghost" size="sm" className="hover:text-primary transition-colors">
-              <Download className="w-6 h-6" />
-            </Button>
-          </div>
+         
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
         </div>

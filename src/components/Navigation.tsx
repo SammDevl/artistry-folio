@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Home, User, Briefcase, Mail } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [atTop, setAtTop] = useState(true);
 
   const navItems = [
     { id: "home", label: "Home", icon: Home },
@@ -28,6 +29,8 @@ const Navigation = () => {
           }
         }
       }
+
+      setAtTop(window.scrollY === 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -43,7 +46,13 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav
+      className={`fixed top-0 left-0 right-0 w-full z-50 transition-colors duration-300 ${
+        atTop
+          ? "bg-background/0 backdrop-blur-lg border-border"
+          : "bg-background shadow-md"
+      }`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">

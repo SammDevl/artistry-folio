@@ -35,19 +35,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "john.doe@example.com",
-      href: "mailto:john.doe@example.com"
+      value: "samueldipta@gmail.com",
+      href: "mailto:samueldipta@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+62 821-4561-1557",
+      href: "tel:+6282145611557"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "Bali, Indonesia",
       href: "#"
     }
   ];
@@ -57,20 +57,20 @@ const Contact = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-            Let's Work Together
+            Let's not Work Together
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life.
+            Have a project in mind? I would not want to hear about it! 
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+  
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold mb-4">Get In Touch</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, creative projects, 
-                or potential collaborations. Feel free to reach out through any of 
+                I'm always closed to discussing new opportunities, creative projects, 
+                or potential collaborations. Do Not Try to reach out through any of 
                 the channels below or use the contact form.
               </p>
             </div>
@@ -98,55 +98,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <Card className="hover:shadow-card transition-all duration-300">
-            <CardHeader>
-              <CardTitle className="text-2xl">Send a Message</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Input
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="h-12"
-                  />
-                </div>
-                <div>
-                  <Input
-                    name="email"
-                    type="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="h-12"
-                  />
-                </div>
-                <div>
-                  <Textarea
-                    name="message"
-                    placeholder="Your Message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="resize-none"
-                  />
-                </div>
-                <Button 
-                  type="submit" 
-                  className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 h-12"
-                >
-                  <Send className="w-5 h-5 mr-2" />
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
+        
       </div>
     </section>
   );

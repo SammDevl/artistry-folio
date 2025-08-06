@@ -4,30 +4,30 @@ import { Code2, Palette, Rocket, Users } from "lucide-react";
 
 const About = () => {
   const skills = [
-    "React", "TypeScript", "Next.js", "Node.js", "Python", "PostgreSQL",
-    "TailwindCSS", "Figma", "AWS", "Docker", "GraphQL", "MongoDB"
+    "React", "TypeScript", "BP.JS", "Node.js",
+    "TailwindCSS", "Figma", "Docker", "MongoDB", "PHP", "MySQL", "Git", "Shadcn UI"
   ];
 
   const features = [
     {
       icon: Code2,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable code following best practices and modern standards."
+      title: "Not So Clean Code",
+      description: "Ill write code that is not clean, but it works! I promise.",
     },
     {
       icon: Palette,
       title: "UI/UX Design",
-      description: "Creating beautiful, intuitive interfaces that provide exceptional user experiences."
+      description: "I Suck at design, but I can make it look decent.",
     },
     {
       icon: Rocket,
       title: "Performance",
-      description: "Building fast, optimized applications with excellent performance and SEO."
+      description: "If it works, it works! Performance is not my priority.",
     },
     {
       icon: Users,
       title: "Collaboration",
-      description: "Working effectively in teams using agile methodologies and modern tools."
+      description: "Never worked in a team, but I can try.",
     }
   ];
 
@@ -39,7 +39,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Passionate developer with 5+ years of experience creating digital solutions
+            Ingin Menjadi Programmer Handal Namun Enggan Ngoding
           </p>
         </div>
 
@@ -47,25 +47,20 @@ const About = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Started as a self-taught developer with a passion for creating digital experiences. 
-              Over the years, I've worked with startups and established companies, helping them 
-              build scalable web applications and improve their digital presence.
+              Started my journey in web development in my highschool days, I have always been fascinated by the power of code to create and innovate.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I believe in continuous learning and staying up-to-date with the latest technologies. 
-              When I'm not coding, you can find me contributing to open-source projects, writing 
-              technical articles, or exploring new design trends.
-            </p>
+              Ive never been a smart student, but I always found joy in solving problems through programming.</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-1">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
                 <Card key={index} className="p-6 hover:shadow-card transition-all duration-300 group">
                   <CardContent className="p-0">
                     <div className="flex flex-col items-center text-center space-y-3">
-                      <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                      <div className="p-3 bg-primary/30 rounded-lg group-hover:bg-primary/20 transition-colors">
                         <Icon className="w-8 h-8 text-primary" />
                       </div>
                       <h4 className="font-semibold">{feature.title}</h4>
