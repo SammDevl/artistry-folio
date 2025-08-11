@@ -23,8 +23,8 @@ const Education = () => {
 
   const courses = [
     "React Native Development",
-    "Beginner to Advanced JavaScript",
-    "Beginner to Advanced Node.js",
+    "Beginner JavaScript",
+    "Beginner Node.js",
     "Intermediate PHP",
     "Intermediate MySQL",
     "Beginner TypeScript",

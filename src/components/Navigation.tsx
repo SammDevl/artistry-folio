@@ -10,7 +10,7 @@ const Navigation = () => {
   const navItems = [
     { id: "home", label: "Home", icon: Home },
     { id: "about", label: "About", icon: User },
-    { id: "education", label: "Education", icon: Briefcase },
+    { id: "education", label: "Educ   ation", icon: Briefcase },
     { id: "contact", label: "Contact", icon: Mail },
   ];
 
