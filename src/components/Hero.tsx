@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { Mail } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import FadeSection from "./FadeSection";
 
