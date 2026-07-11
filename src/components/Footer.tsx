@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 bg-[#87CEEB]">
+    <footer className="py-12 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
         <div className="w-full">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="gt-title text-2xl mb-2">
                 Samuel Dipta Yogi Taruna
               </div>
-              <p className="text-[#114b5f] font-bold">
+              <p className="text-cyan-200 font-bold">
                 Full Stack Developer
               </p>
             </div>
