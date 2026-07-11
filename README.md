@@ -1,86 +1,58 @@
-# Artistry Folio
+# Samuel Dipta Yogi Taruna - Portfolio
 
-A modern, responsive portfolio website built with React and Tailwind CSS. Artistry Folio showcases your creative work, skills, and contact information with elegant animations and a clean design.
+A unique, retro-themed personal portfolio website built for Samuel Dipta Yogi Taruna. The entire user interface is heavily inspired by the classic **Growtopia Player Profile and Main Menu** aesthetic. 
 
-## Features
+Designed with thick borders, pixelated elements, bubbly fonts, and vibrant teal/cyan color palettes, this portfolio stands out with a heavily stylized, nostalgic game UI look.
 
-- **Hero Section** with animated background and profile picture
-- **Translucent Navigation Bar** that changes style on scroll
-- **Fade-in Section Animations** using Intersection Observer
-- **Responsive Design** for all devices
-- **Customizable Content** for your projects, skills, and contact info
+## 🎮 Theme & Aesthetic
+- **Growtopia UI Style:** The site uses the iconic dark teal panels (`#114b5f`), sky blue backgrounds, bright cyan buttons, and neon green accents directly referencing the classic MMO sandbox game.
+- **Varela Round Font:** A soft, bubbly font paired with thick, solid black text-shadows (`text-shadow: 1px 1px 0px black`) to emulate retro game text.
+- **Pixel Art Background:** Features a custom dark azure-blue pixel art scene with cross-shaped clouds and ground silhouettes in the hero section.
 
-## Getting Started
+## ✨ Features
+- **Floating Chat-Box Navigation:** The navbar mimics an in-game system chat box floating on the top left. It can be collapsed (`[-]`) and expanded (`[+]`) seamlessly without taking up full screen width.
+- **Interactive Stacked Arrow:** A retro `ChevronsDown` arrow icon in the hero section smoothly scrolls down to the content below when clicked.
+- **Fully Responsive:** Beautifully packed tight to fit all panels (About, Education, Contact) onto screens comfortably without excessive scrolling.
+- **Static Solid Panels:** Removed generic modern fade-in scroll animations in favor of static, punchy game-window layouts that load instantly.
 
-### Prerequisites
+## 🛠️ Tech Stack
+- **Framework:** React 18 & Vite
+- **Language:** TypeScript
+- **Styling:** TailwindCSS (with heavily customized `index.css` utility classes like `.gt-panel`, `.gt-button`, `.text-shadow-sm`)
+- **Icons:** Lucide-React
+- **UI Components:** Shadcn UI base (Heavily modified)
 
-- [Node.js](https://nodejs.org/) (v16+ recommended)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+## 🚀 Getting Started
 
-### Installation
-
-1. Clone the repository:
-
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/artistry-folio.git
+   git clone https://github.com/SammDevl/artistry-folio.git
    cd artistry-folio
    ```
 
-2. Install dependencies:
-
+2. **Install dependencies:**
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
-3. Start the development server:
-
+3. **Start the development server:**
    ```bash
    npm run dev
-   # or
-   yarn dev
    ```
 
 4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## Project Structure
+## 📁 Custom Design System (`index.css`)
+The project utilizes a custom design system built on top of Tailwind to enforce the game UI aesthetic globally:
+- `.gt-panel`: The large dark teal window boxes with inner white highlights and black borders.
+- `.gt-button`: The bright cyan interactable grid buttons.
+- `.gt-title`: The iconic neon green headers.
+- `.text-shadow-sm`: Forces a sharp 1px solid black shadow behind white text for maximum readability.
 
-```
-src/
-  components/      # Reusable React components (Hero, Nav, FadeSection, etc.)
-  assets/          # Images and icons
-  App.tsx          # Main app component
-  main.tsx         # Entry point
-public/
-  favicon.ico      # Site icon
-  index.html       # HTML template
-```
+## 👨‍💻 About The Developer
+**Samuel Dipta Yogi Taruna**  
+*"Ingin Menjadi Programmer Handal Namun Enggan Ngoding"*  
+I write code that works (most of the time). Performance might not be the priority, but the aesthetic always is!
 
-## Customization
-
-- **Profile Picture:** Replace `/public/Profile_Picture.JPG` with your own image.
-- **Favicon:** Replace `/public/favicon.ico` or `/public/favicon.svg`.
-- **Content:** Edit components in `src/components/` to update your name, bio, projects, etc.
-- **Colors & Styles:** Adjust Tailwind classes in the components for your preferred look.
-
-## Deployment
-
-You can deploy this site to [Vercel](https://vercel.com/), [Netlify](https://netlify.com/), or any static hosting provider.
-
-```bash
-npm run build
-# or
-yarn build
-```
-
-The output will be in the `dist/` folder.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## Credits
-
-Created by ##**SammDevl**.  
-Inspired by modern
+- **GitHub:** [SammDevl](https://github.com/SammDevl)
+- **LinkedIn:** [Samuel Dipta](https://www.linkedin.com/in/samuel-dipta-89697336a/)
