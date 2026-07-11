@@ -6,8 +6,8 @@ const Navigation = () => {
 
   const navItems = [
     { id: "home", command: "/warp home" },
-    { id: "about", command: "/whois samuel" },
-    { id: "education", command: "/stats education" },
+    { id: "about", command: "/info samuel" },
+    { id: "education", command: "/status education" },
     { id: "contact", command: "/msg contact" },
   ];
 
