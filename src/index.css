@@ -1,108 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Growtopia Store Theme Design System
+   All colors MUST be HSL.
+   Inspired by Growtopia's blue panels, orange buttons, and Century Gothic font.
 */
 
 @layer base {
   :root {
-    /* Modern portfolio color scheme */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    /* Growtopia Player Profile color scheme */
+    --background: 195 72% 70%;
+    --foreground: 0 0% 100%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 192 46% 51%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 192 46% 51%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 263 70% 50%;
-    --primary-foreground: 0 0% 98%;
+    /* Bright Cyan Buttons */
+    --primary: 193 64% 53%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 192 46% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 192 46% 41%;
+    --muted-foreground: 192 20% 90%;
 
-    --accent: 193 100% 50%;
-    --accent-foreground: 240 10% 3.9%;
+    /* Neon Green Heading */
+    --accent: 93 100% 45%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 263 70% 50%;
+    --border: 0 0% 0%;
+    --input: 192 46% 41%;
+    --ring: 0 0% 100%;
 
-    /* Portfolio-specific design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(263 70% 50%), hsl(193 100% 50%));
-    --gradient-secondary: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(240 3.7% 15.9%));
-    --gradient-hero: linear-gradient(135deg, hsl(263 70% 50% / 0.1), hsl(193 100% 50% / 0.1));
-    
-    --shadow-glow: 0 0 40px hsl(263 70% 50% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
-    
-    --animation-duration: 0.6s;
-    --animation-ease: cubic-bezier(0.4, 0, 0.2, 1);
+    /* Growtopia-specific design tokens */
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
-    --radius: 0.75rem;
+    --animation-duration: 0.2s;
+    --animation-ease: ease-in-out;
 
-    --sidebar-background: 0 0% 98%;
+    /* More boxy — Growtopia game-panel feel */
+    --radius: 0.5rem;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 210 80% 10%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 202 84% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 50% 20%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 210 40% 30%;
+    --sidebar-ring: 202 84% 53%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 210 85% 7%;
+    --foreground: 0 0% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 70% 12%;
+    --card-foreground: 0 0% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 70% 12%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 202 84% 53%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 50% 18%;
+    --secondary-foreground: 0 0% 96%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 45% 18%;
+    --muted-foreground: 210 20% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 10 92% 56%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: 210 40% 25%;
+    --input: 210 40% 22%;
+    --ring: 202 84% 53%;
+
+    --sidebar-background: 210 85% 7%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 202 84% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 210 50% 18%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 210 40% 25%;
+    --sidebar-ring: 202 84% 53%;
   }
 }
 
@@ -113,5 +108,30 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Century Gothic', 'CenturyGothic', 'Poppins', 'AppleGothic', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gt-panel {
+    @apply bg-card rounded-xl border-[4px] border-black text-white;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.8), 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  }
+
+  .gt-button {
+    @apply bg-primary rounded-md border-[2px] border-white text-white drop-shadow-md transition-all hover:brightness-110 active:scale-95 text-shadow-sm flex flex-col items-center justify-center;
+  }
+
+  .gt-button-alt {
+    @apply bg-[#E6D8B8] rounded-md border-2 border-black text-black drop-shadow-md transition-all hover:brightness-110 active:scale-95 text-center font-bold;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+  }
+
+  .gt-title {
+    @apply text-accent font-bold text-shadow;
+  }
+
+  .gt-close-btn {
+    @apply absolute -top-4 -right-4 w-10 h-10 bg-black border-[3px] border-white rounded-md flex items-center justify-center text-white hover:bg-gray-800 transition-colors shadow-md z-50;
   }
 }

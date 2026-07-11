@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				gt: ['Varela Round', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -119,5 +122,17 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		function({ addUtilities }: any) {
+			addUtilities({
+				'.text-shadow': {
+					'text-shadow': '2px 2px 0px rgba(0,0,0,0.8)',
+				},
+				'.text-shadow-sm': {
+					'text-shadow': '1px 1px 0px rgba(0,0,0,0.8)',
+				},
+			})
+		}
+	],
 } satisfies Config;

@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Menu, X, Home, User, Briefcase, Mail } from "lucide-react";
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [atTop, setAtTop] = useState(true);
+  const [isChatOpen, setIsChatOpen] = useState(true);
 
   const navItems = [
-    { id: "home", label: "Home", icon: Home },
-    { id: "about", label: "About", icon: User },
-    { id: "education", label: "Education", icon: Briefcase },
-    { id: "contact", label: "Contact", icon: Mail },
+    { id: "home", command: "/warp home" },
+    { id: "about", command: "/whois samuel" },
+    { id: "education", command: "/stats education" },
+    { id: "contact", command: "/msg contact" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = navItems.map(item => document.getElementById(item.id));
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
         if (section) {
@@ -29,8 +26,6 @@ const Navigation = () => {
           }
         }
       }
-
-      setAtTop(window.scrollY === 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -42,77 +37,40 @@ const Navigation = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
-    setIsOpen(false);
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 w-full z-50 transition-colors duration-300 ${
-        atTop
-          ? "bg-background/0 backdrop-blur-lg border-border"
-          : "bg-background shadow-md"
-      }`}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            Portfolio
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  activeSection === item.id
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
-          </div>
+    <nav className="fixed top-4 left-4 z-50 w-72 max-w-[calc(100vw-2rem)] bg-black/60 border border-white/20 rounded p-2 shadow-md pointer-events-auto font-gt text-sm backdrop-blur-sm">
+      <div className="mb-2 border-b border-white/20 pb-1 flex justify-between items-center relative">
+        <div>
+          <span className="text-yellow-400">{'<System>'}</span> <span className="text-white">Welcome to Portfolio!</span>
         </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background/95 backdrop-blur-lg rounded-lg mt-2">
-              {navItems.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => scrollToSection(item.id)}
-                    className={`flex items-center px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors duration-200 ${
-                      activeSection === item.id
-                        ? "text-primary bg-primary/10"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                    }`}
-                  >
-                    <Icon className="h-5 w-5 mr-3" />
-                    {item.label}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        )}
+        <button 
+          onClick={() => setIsChatOpen(!isChatOpen)}
+          className="absolute -top-6 -right-6 w-8 h-8 bg-black border-[2px] border-white rounded-md flex items-center justify-center text-white hover:bg-gray-800 transition-colors shadow-md z-50 font-gt font-bold text-lg"
+          title={isChatOpen ? "Minimize" : "Expand"}
+        >
+          {isChatOpen ? 'X' : '+'}
+        </button>
       </div>
+      {isChatOpen && (
+        <div className="flex flex-col space-y-1">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`text-left px-1 py-0.5 rounded transition-colors hover:bg-white/10 ${
+                activeSection === item.id ? "bg-white/5" : ""
+              }`}
+            >
+              <span className="text-blue-300">{'<Guest>'}</span>{' '}
+              <span className={activeSection === item.id ? "text-green-400" : "text-white"}>
+                {item.command}
+              </span>
+            </button>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };

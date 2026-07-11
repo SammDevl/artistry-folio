@@ -4,7 +4,6 @@ import About from "@/components/About";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import Journal from "@/components/Journal";
 
 const Index = () => {
   return (
@@ -14,7 +13,6 @@ const Index = () => {
       <About />
       <Education />
       <Contact />
-      <Journal />
       <Footer />
     </div>
   );
