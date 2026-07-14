@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Mail, ChevronsDown } from "lucide-react";
@@ -18,7 +20,7 @@ const Hero = () => {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
-          style={{ backgroundImage: `url(${heroBg})` }}
+          style={{ backgroundImage: `url(${heroBg.src})` }}
         />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16 pb-8">

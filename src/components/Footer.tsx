@@ -39,7 +39,7 @@ const Footer = () => {
 
           <div className="mt-8 pt-8 border-t-2 border-black/20 text-center">
             <p className="text-white font-bold text-shadow-sm flex items-center justify-center gap-2">
-              © {currentYear} Samuel Dipta Yogi Taruna. Made with <Heart className="w-5 h-5 text-red-500 fill-red-500 drop-shadow-md" /> using React, Vite & TailwindCSS
+              © {currentYear} Samuel Dipta Yogi Taruna. Made with <Heart className="w-5 h-5 text-red-500 fill-red-500 drop-shadow-md" /> using NextJS & TailwindCSS
             </p>
           </div>
         </div>
