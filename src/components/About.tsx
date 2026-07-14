@@ -59,7 +59,7 @@ const About = () => {
                 {features.map((feature, index) => {
                   const Icon = feature.icon;
                   return (
-                    <div key={index} className="gt-button flex flex-col items-center text-center space-y-2 p-3 sm:p-4 h-full justify-start">
+                    <div key={index} className="flex flex-col items-center text-center space-y-2 p-3 sm:p-4 h-full justify-start shadow-[inset_0_2px_10px_rgba(0,0,0,0.5)] bg-[#114b5f] border-[3px] border-black rounded-xl">
                       <Icon className="w-8 h-8 text-white drop-shadow-md" />
                       <h4 className="font-bold text-white uppercase tracking-wider text-sm text-shadow-sm">{feature.title}</h4>
                       <p className="text-xs text-cyan-100 text-shadow-sm leading-snug">{feature.description}</p>
