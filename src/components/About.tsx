@@ -3,7 +3,7 @@ import FadeSection from "./FadeSection";
 
 const About = () => {
   const skills = [
-    "React", "TypeScript", "BP.JS", "Node.js",
+    "React", "TypeScript", "NextJS",
     "TailwindCSS", "Figma", "Docker", "MongoDB", "PHP", "MySQL", "Git", "Shadcn UI"
   ];
 
